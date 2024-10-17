@@ -1,3 +1,20 @@
+## v8.32.3 (October 17th 2024)
+### Implementation changes and bug fixes
+- [PR #1947](https://github.com/rqlite/rqlite/pull/1947): Add atomic monotonic Uint64 to rsync module.
+- [PR #1949](https://github.com/rqlite/rqlite/pull/1949): Store uses timeout for linearizable read.
+- [PR #1950](https://github.com/rqlite/rqlite/pull/1950): Linearizable reads VerifyLeader must happen in same term.
+
+## v8.32.2 (October 15th 2024)
+This release corrects the implementation of Linearizable reads so they implement exactly the process described in section 6.4 of the [Raft dissertation](https://raw.githubusercontent.com/ongardie/dissertation/refs/heads/master/online.pdf) by Diego Ongaro.
+### Implementation changes and bug fixes
+- [PR #1944](https://github.com/rqlite/rqlite/pull/1944): Correct implementation of linearizable reads.
+- [PR #1945](https://github.com/rqlite/rqlite/pull/1945): Convert DB timeout to nanoseconds correctly.
+- [PR #1946](https://github.com/rqlite/rqlite/pull/1946): Support configurable Linearizable read timeouts.
+
+## v8.32.1 (October 13th 2024)
+### Implementation changes and bug fixes
+- [PR #1943](https://github.com/rqlite/rqlite/pull/1943): rqlite shell supports enabling Linearizable reads.
+
 ## v8.32.0 (October 13th 2024)
 ### New features
 - [PR #1930](https://github.com/rqlite/rqlite/pull/1930), [PR #1935](https://github.com/rqlite/rqlite/pull/1935), [PR #1936](https://github.com/rqlite/rqlite/pull/1936), [PR #1937](https://github.com/rqlite/rqlite/pull/1937), [PR #1938](https://github.com/rqlite/rqlite/pull/1938): Add Linearizable reads. Thanks @lalalalatt, @peterxcli
